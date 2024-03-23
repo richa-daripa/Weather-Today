@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.template{
+    width: 470px;   
+    background: linear-gradient(135deg, #00feba,#5b548a);    /*gradients let you display smooth transitions between two or more specified colors.*/
+    margin: 50px auto 0; /*all four margins are 50px*/
+    border-radius: 10px;
+    padding: 40px 35px;/*top and bottom padding are 40px & right and left padding are 35px*/
+    text-align: center;
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.search input{
+    border: none;
+    outline: 0;
+    padding: 10px 25px;
+    color: #555;
+    height: 60px;
+    border-radius: 30px 0px 0px 30px;/*top-left corner,top-right corner,bottom-right corner,bottom-left corner*/
+    font-size: 18px;
+    flex: 1;  /*If the element is not a flexible item, the flex property has no effect.sets the flexible length on flexible items.*/
+    /*margin-right: 16px;*/
+}
+.search button{
+    border: none;
+    outline: 0;
+    border-radius: 0px 30px 30px 0px;
+    font-size: 27px;
+    color: #555;
+    width: 60px;/*sets the width of an element.*/
+    height: 60px;
+    cursor: pointer;
+}
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+.weather h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 7px;
+}
+.humidity, .wind{
+font-size: 25px;
+}
+.weather{
+    display: none;
+}
+.error{
+    text-align: center;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 25px;
+    display: none;
+}
+

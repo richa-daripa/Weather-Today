@@ -10,8 +10,9 @@
 
 <body>
     <div class="template">
+
         <div class="search">
-            <input placeholder="enter city name" spellcheck="false">
+            <input placeholder="Enter any city" spellcheck="false">
             <button> <i class="fa-solid fa-magnifying-glass"></i></button>
         </div> 
 
@@ -20,27 +21,43 @@
         </div>
 
         <div class="weather">
-            <img src="images/rain.png" class="weather-icon">
-            <h1 class="temp">0°C</h1>
-            <h2 class="city">ABC</h2>
+            <p class="city">Kolkata</p>
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" class="weather-icon">
+            <h1 class="temp">27°<span>c</span></h1>
+            <p class="description">Haze 35°/45°</p> 
+            
             <div class="details">
                 <div class="col">
-                    <img src="images/humidity.png">
+                    <i class="fa-solid fa-temperature-high"></i>
                     <div>
                         <p class="humidity">0%</p>
                         <p>Humidity</p>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="images/wind.png" >
+                    <i class="fa-solid fa-wind"></i>
                     <div>
                         <p class="wind">0km/h</p>
                         <p>Wind</p>
                     </div>
                 </div>
-                
+            </div>
+            <div class="details2">
+                <div>
+                    <p>Pressure</p>
+                    <p class="pressure">0 mbar</p>
+                </div>
+                <div>
+                    <p>Real feel</p>
+                    <p class="rf">35°</p>
+                </div>
+                <div>
+                    <p>Visibility</p>
+                    <p class="visibility">0m</p>
+                </div>  
             </div>
         </div>
+        
     </div>
     
     <script src="script.js"></script>

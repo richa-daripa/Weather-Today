@@ -14,41 +14,32 @@ async function checkweather(city){
         document.querySelector(".weather").style.display="none";
     }
     else{
-        var data=await response.json();//response.json() is a method of the Response object that allows a JSON object to be extracted from the response. 
-        //The method returns a promise ie. await
-    
+        let data=await response.json();
         
-        document.querySelector(".city").innerHTML=data.name;
-        document.querySelector(".temp").innerHTML=Math.round(data.main.temp)+"°C";
-        document.querySelector(".humidity").innerHTML=data.main.humidity+"%";
-        document.querySelector(".wind").innerHTML=data.wind.speed+"km/h";
 
-        if(data.weather[0].main=="Clouds"){
-            weatherIcon.src="images/clouds.png";
-        }
-        else if(data.weather[0].main=="Clear"){
-            weatherIcon.src="images/clear.png";
-        }
-        else if(data.weather[0].main=="Drizzle"){
-            weatherIcon.src="images/drizzle.png";
-        }
-        else if(data.weather[0].main=="Snow"){
-            weatherIcon.src="images/snow.png";
-        }
-        else if(data.weather[0].main=="Rain"){
-            weatherIcon.src="images/rain.png";
-        }
-        else if(data.weather[0].main=="Haze"){
-            weatherIcon.src="images/haze.png";
-        }
+        document.querySelector(".city").innerHTML=data.name;
+        let st=data.weather[0].description;
+        let desc=st.charAt(0).toUpperCase() + st.slice(1);
+        document.querySelector(".description").innerHTML=`${desc} ${Math.round(data.main.temp_min)}° /${Math.round(data.main.temp_max)}°`;
+        document.querySelector(".temp").innerHTML=Math.round(data.main.temp)+"°c";
+        document.querySelector(".humidity").innerHTML=data.main.humidity+"%";
+        let spd= data.wind.speed * (18/5);
+        document.querySelector(".wind").innerHTML=Math.round(spd)+"km/h";
+        document.querySelector(".pressure").innerHTML=data.main.pressure+"hPa";
+        document.querySelector(".rf").innerHTML=Math.round(data.main.feels_like)+"°";
+        document.querySelector(".visibility").innerHTML=data.visibility+"km";
+
+        weatherIcon.src=`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        
 
         document.querySelector(".weather").style.display="block";
         document.querySelector(".error").style.display="none";
-    }
+      }
 }
 
 
 searchbtn.addEventListener("click", ()=>{     
-    checkweather(searchbox.value);
+  checkweather(searchbox.value);
 });
+
 

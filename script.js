@@ -17,14 +17,18 @@ async function checkweather(city){
     let data=await response.json();
         
     document.querySelector(".city").innerHTML=data.name;
+
     let st=data.weather[0].description;
     let desc=st.charAt(0).toUpperCase() + st.slice(1);
     document.querySelector(".description").innerHTML=`${desc} ${Math.round(data.main.temp_min)}° /${Math.round(data.main.temp_max)}°`;
+
     document.querySelector(".temp").innerHTML=Math.round(data.main.temp)+"°c";
     document.querySelector(".humidity").innerHTML=data.main.humidity+"%";
+
     let spd= data.wind.speed * (18/5);
     document.querySelector(".wind").innerHTML=Math.round(spd)+"km/h";
-    document.querySelector(".pressure").innerHTML=data.main.pressure+"hPa";
+
+    document.querySelector(".pressure").innerHTML=data.main.pressure+"mbar";
     document.querySelector(".rf").innerHTML=Math.round(data.main.feels_like)+"°";
     document.querySelector(".visibility").innerHTML=data.visibility+"km";
 

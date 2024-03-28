@@ -53,7 +53,6 @@ body{
     font-weight: 400;
     margin-top: 10%;
 }
-
 .details{
     display: flex;
     align-items: center;
@@ -67,12 +66,10 @@ body{
     align-items: center;
     text-align: left;
 }
-
 .col i{
     font-size: 30px;
     margin-right: 9px;
 }
-
 .weather{
     display: none;
 }

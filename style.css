@@ -41,7 +41,7 @@ body{
     cursor: pointer;
 }
 .weather-icon{
-    width: 170px;
+    width: 200px;
     margin-top: 5px;
 }
 .weather h1{
@@ -95,3 +95,20 @@ body{
     margin-bottom: 5px;  
 }  
 
+@media screen and (max-width: 600px)  {
+    .weather{
+        margin-top: 15%;
+    }
+    .city{
+        font-size: 20px;
+    }
+    .weather-icon{
+        width: 300px;
+    }
+    .weather h1{
+        font-size: 90px;
+    }
+    .details, .details2{
+        font-size: 16px;
+    }
+}

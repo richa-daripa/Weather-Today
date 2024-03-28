@@ -10,9 +10,9 @@ body{
 .template{
     width: 470px;   
     background: linear-gradient(135deg, #00feba,#5b548a);    
-    margin: 50px auto 0; /*all four margins are 50px*/
+    margin: 50px auto 0; 
     border-radius: 10px;
-    padding: 40px 35px;/*top and bottom padding are 40px & right and left padding are 35px*/
+    padding: 40px 35px;
     text-align: center;
 }
 .search{
@@ -28,7 +28,7 @@ body{
     color: #555;
     border-radius: 30px 0px 0px 30px;/*top-left corner,top-right corner,bottom-right corner,bottom-left corner*/
     font-size: 15px;
-    flex: 1;  /*If the element is not a flexible item, the flex property has no effect.sets the flexible length on flexible items.*/
+    flex: 1;  
 }
 .search button{
     border: none;
@@ -60,7 +60,7 @@ body{
     justify-content: space-between;
     padding: 0 20px;
     margin-top: 50px;
-    font-size: 15px;
+    font-size: 13px;
 }
 .col{
     display: flex;
@@ -70,7 +70,7 @@ body{
 
 .col i{
     font-size: 30px;
-    margin-right: 8px;
+    margin-right: 9px;
 }
 
 .weather{
@@ -88,7 +88,7 @@ body{
     padding: 5px 25px;
     border-radius: 5px;
     margin-top: 8%;
-    font-size: 15px;
+    font-size: 13px;
     
 }
 .details2 div{
@@ -97,3 +97,4 @@ body{
     justify-content: space-between;
     margin-bottom: 5px;  
 }  
+
